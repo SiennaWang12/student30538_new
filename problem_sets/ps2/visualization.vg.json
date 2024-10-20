@@ -1,0 +1,369 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Ticket notice level flow diagram.",
+  "width": 600,
+  "height": 400,
+  "padding": 5,
+  "signals": [
+    {"name": "labels", "value": true, "bind": {"input": "checkbox"}},
+    {
+      "name": "layout",
+      "value": "tidy",
+      "bind": {"input": "radio", "options": ["tidy", "cluster"]}
+    },
+    {
+      "name": "links",
+      "value": "diagonal",
+      "bind": {
+        "input": "select",
+        "options": ["line", "curve", "diagonal", "orthogonal"]
+      }
+    },
+    {"name": "separation", "value": false, "bind": {"input": "checkbox"}}
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "values": [
+        {
+          "id": "Ticket Issued",
+          "parent": "",
+          "name": "(Ticket Issued)",
+          "y": 282.3529411764706,
+          "x": 0,
+          "depth": 0,
+          "children": 3
+        },
+        {
+          "id": "VIOL",
+          "parent": "Ticket Issued",
+          "name": "VIOL",
+          "y": 188.23529411764707,
+          "x": 83.33333333333333,
+          "depth": 1,
+          "children": 3
+        },
+        {
+          "id": "Hearing",
+          "parent": "Ticket Issued",
+          "name": "(Hearing)",
+          "y": 329.4117647058824,
+          "x": 83.33333333333333,
+          "depth": 1,
+          "children": 2
+        },
+        {
+          "id": "Hearing2",
+          "parent": "VIOL",
+          "name": "(Hearing)",
+          "y": 117.64705882352942,
+          "x": 166.66666666666666,
+          "depth": 2,
+          "children": 2
+        },
+        {
+          "id": "DETR2",
+          "parent": "Hearing2",
+          "name": "DETR",
+          "y": 94.11764705882354,
+          "x": 250,
+          "depth": 3,
+          "children": 2
+        },
+        {
+          "id": "End of Flow",
+          "parent": "Hearing2",
+          "name": "End of Flow",
+          "y": 141.1764705882353,
+          "x": 250,
+          "depth": 3,
+          "children": 0
+        },
+        {
+          "id": "SEIZ2",
+          "parent": "DETR2",
+          "name": "SEIZ",
+          "y": 70.58823529411765,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 2
+        },
+        {
+          "id": "End of Flow",
+          "parent": "DETR2",
+          "name": "End of Flow",
+          "y": 117.64705882352942,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 0
+        },
+        {
+          "id": "FINL2",
+          "parent": "SEIZ2",
+          "name": "FINL",
+          "y": 47.05882352941177,
+          "x": 416.66666666666663,
+          "depth": 5,
+          "children": 2
+        },
+        {
+          "id": "End of Flow",
+          "parent": "SEIZ2",
+          "name": "End of Flow",
+          "y": 94.11764705882354,
+          "x": 416.66666666666663,
+          "depth": 5,
+          "children": 0
+        },
+        {
+          "id": "DLS",
+          "parent": "FINL2",
+          "name": "DLS",
+          "y": 23.529411764705884,
+          "x": 500,
+          "depth": 6,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "FINL2",
+          "name": "End of Flow",
+          "y": 70.58823529411765,
+          "x": 500,
+          "depth": 6,
+          "children": 0
+        },
+        {
+          "id": "(Blank)",
+          "parent": "Ticket Issued",
+          "name": "(Blank)",
+          "y": 376.47058823529414,
+          "x": 83.33333333333333,
+          "depth": 1,
+          "children": 0
+        },
+        {
+          "id": "DETR",
+          "parent": "Hearing",
+          "name": "DETR",
+          "y": 305.88235294117646,
+          "x": 166.66666666666666,
+          "depth": 2,
+          "children": 2
+        },
+        {
+          "id": "VIOL2",
+          "parent": "DETR",
+          "name": "VIOL",
+          "y": 282.3529411764706,
+          "x": 250,
+          "depth": 3,
+          "children": 2
+        },
+        {
+          "id": "SEIZ3",
+          "parent": "VIOL2",
+          "name": "SEIZ",
+          "y": 258.82352941176475,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 2
+        },
+        {
+          "id": "FINL3",
+          "parent": "SEIZ3",
+          "name": "FINL",
+          "y": 235.29411764705884,
+          "x": 416.66666666666663,
+          "depth": 5,
+          "children": 2
+        },
+        {
+          "id": "DLS",
+          "parent": "FINL3",
+          "name": "DLS",
+          "y": 211.76470588235296,
+          "x": 500,
+          "depth": 6,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "VIOL2",
+          "name": "End of Flow",
+          "y": 305.88235294117646,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "FINL3",
+          "name": "End of Flow",
+          "y": 258.82352941176475,
+          "x": 500,
+          "depth": 6,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "SEIZ3",
+          "name": "End of Flow",
+          "y": 282.3529411764706,
+          "x": 416.66666666666663,
+          "depth": 5,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "DETR",
+          "name": "End of Flow",
+          "y": 329.4117647058824,
+          "x": 250,
+          "depth": 3,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "Hearing",
+          "name": "End of Flow",
+          "y": 352.9411764705883,
+          "x": 166.66666666666666,
+          "depth": 2,
+          "children": 0
+        },
+        {
+          "id": "SEIZ",
+          "parent": "VIOL",
+          "name": "SEIZ",
+          "y": 211.76470588235296,
+          "x": 166.66666666666666,
+          "depth": 2,
+          "children": 2
+        },
+        {
+          "id": "End of Flow",
+          "parent": "VIOL",
+          "name": "End of Flow",
+          "y": 258.82352941176475,
+          "x": 166.66666666666666,
+          "depth": 2,
+          "children": 0
+        },
+        {
+          "id": "FINL",
+          "parent": "SEIZ",
+          "name": "FINL",
+          "y": 188.23529411764707,
+          "x": 250,
+          "depth": 3,
+          "children": 2
+        },
+        {
+          "id": "End of Flow",
+          "parent": "SEIZ",
+          "name": "End of Flow",
+          "y": 235.29411764705884,
+          "x": 250,
+          "depth": 3,
+          "children": 0
+        },
+        {
+          "id": "DLS",
+          "parent": "FINL",
+          "name": "DLS",
+          "y": 164.7058823529412,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 0
+        },
+        {
+          "id": "End of Flow",
+          "parent": "FINL",
+          "name": "End of Flow",
+          "y": 211.76470588235296,
+          "x": 333.3333333333333,
+          "depth": 4,
+          "children": 0
+        }
+      ],
+      "transform": [
+        {"type": "stratify", "key": "id", "parentKey": "parent"},
+        {
+          "type": "tree",
+          "method": {"signal": "layout"},
+          "size": [{"signal": "height"}, {"signal": "width - 100"}],
+          "separation": {"signal": "separation"},
+          "as": ["y", "x", "depth", "children"]
+        }
+      ]
+    },
+    {
+      "name": "links",
+      "source": "tree",
+      "transform": [
+        {"type": "treelinks"},
+        {
+          "type": "linkpath",
+          "orient": "horizontal",
+          "shape": {"signal": "links"}
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "(Ticket Issued)",
+        "(Hearing)",
+        "VIOL",
+        "SEIZ",
+        "FINL",
+        "DLS",
+        "DETR"
+      ],
+      "range": ["grey", "grey", "green", "steelblue", "orange", "red", "purple"]
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "from": {"data": "links"},
+      "encode": {
+        "update": {"path": {"field": "path"}, "stroke": {"value": "#ccc"}}
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {"size": {"value": 100}, "stroke": {"value": "#fff"}},
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "fill": {"scale": "color", "field": "name"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "text": {"field": "name"},
+          "fontSize": {"value": 9},
+          "baseline": {"value": "middle"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"},
+          "dx": {"signal": "datum.children ? -7 : 7"},
+          "align": {"signal": "datum.children ? 'right' : 'left'"},
+          "opacity": {"signal": "labels ? 1 : 0"}
+        }
+      }
+    }
+  ]
+}
